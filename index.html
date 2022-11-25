@@ -125,14 +125,6 @@ div.csl-indent {
 background: #034E79;
     }
     </style>
-<script src="content_files/libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
-<script src="content_files/libs/plotly-binding-4.10.1/plotly.js"></script>
-<script src="content_files/libs/typedarray-0.1/typedarray.min.js"></script>
-<script src="content_files/libs/jquery-3.5.1/jquery.min.js"></script>
-<link href="content_files/libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
-<script src="content_files/libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
-<link href="content_files/libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
-<script src="content_files/libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
@@ -250,17 +242,16 @@ ISSN 2824-7795</p>
   </ul></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures"><span class="toc-section-number">2.4</span>  Figures</a></li>
   <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables"><span class="toc-section-number">2.5</span>  Tables</a></li>
-  <li><a href="#algorithms" id="toc-algorithms" class="nav-link" data-scroll-target="#algorithms"><span class="toc-section-number">2.6</span>  Algorithms</a></li>
-  <li><a href="#sec-references" id="toc-sec-references" class="nav-link" data-scroll-target="#sec-references"><span class="toc-section-number">2.7</span>  Handling references</a>
+  <li><a href="#sec-references" id="toc-sec-references" class="nav-link" data-scroll-target="#sec-references"><span class="toc-section-number">2.6</span>  Handling references</a>
   <ul class="collapse">
-  <li><a href="#bibliographic-references" id="toc-bibliographic-references" class="nav-link" data-scroll-target="#bibliographic-references"><span class="toc-section-number">2.7.1</span>  Bibliographic references</a></li>
-  <li><a href="#other-cross-references" id="toc-other-cross-references" class="nav-link" data-scroll-target="#other-cross-references"><span class="toc-section-number">2.7.2</span>  Other cross-references</a></li>
+  <li><a href="#bibliographic-references" id="toc-bibliographic-references" class="nav-link" data-scroll-target="#bibliographic-references"><span class="toc-section-number">2.6.1</span>  Bibliographic references</a></li>
+  <li><a href="#other-cross-references" id="toc-other-cross-references" class="nav-link" data-scroll-target="#other-cross-references"><span class="toc-section-number">2.6.2</span>  Other cross-references</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#session-information" id="toc-session-information" class="nav-link" data-scroll-target="#session-information">Session information</a></li>
   <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="content.pdf"><i class="bi bi-file-pdf"></i>PDF (computo)</a></li></ul></div></nav>
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -279,7 +270,7 @@ ISSN 2824-7795</p>
 </section>
 <section id="formatting" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Formatting</h1>
-<p>This section covers basic formatting guidelines. <a href="https://quarto.org/">Quarto</a> is a versatile formatting system for authoring HTML based on markdown, integrating <span class="math inline">\LaTeX</span> and various code block interpreted either via Jupyter or Knitr (and thus deal with Python, R and many other langages). It relies on the <a href="https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html">Pandoc Markdown</a> markup language.</p>
+<p>This section covers basic formatting guidelines. <a href="https://quarto.org/">Quarto</a> is a versatile formatting system for authoring HTML based on markdown, integrating LaTeX and various code block interpreted either via Jupyter or Knitr (and thus deal with Python, R and many other langages). It relies on the <a href="https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html">Pandoc Markdown</a> markup language.</p>
 <p>To render/compile a document, run <code>quarto render</code>. A document will be generated that includes both content as well as the output of any embedded code chunks within the document:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode .bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render content.qmd <span class="co"># will render to html</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <section id="basic-markdown-formatting" class="level2" data-number="2.1">
@@ -389,18 +380,6 @@ x_L \\ x_N \end{array}\right] \\
 <p><img src="content_files/figure-html/pressure-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>Interactive plots may also be produced in the HTML output of the document:</p>
-<div class="cell">
-<details open="">
-<summary>Hide/Show the code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"plotly"</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplotly</span>(p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div id="htmlwidget-2886eb16bd98e98f30a3" style="width:100%;height:464px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2886eb16bd98e98f30a3">{"x":{"data":[{"x":[1.8,1.8,2,2,2.8,2.8,3.1,1.8,1.8,2,2,2.8,2.8,3.1,3.1,2.8,3.1,4.2,5.3,5.3,5.3,5.7,6,5.7,5.7,6.2,6.2,7,5.3,5.3,5.7,6.5,2.4,2.4,3.1,3.5,3.6,2.4,3,3.3,3.3,3.3,3.3,3.3,3.8,3.8,3.8,4,3.7,3.7,3.9,3.9,4.7,4.7,4.7,5.2,5.2,3.9,4.7,4.7,4.7,5.2,5.7,5.9,4.7,4.7,4.7,4.7,4.7,4.7,5.2,5.2,5.7,5.9,4.6,5.4,5.4,4,4,4,4,4.6,5,4.2,4.2,4.6,4.6,4.6,5.4,5.4,3.8,3.8,4,4,4.6,4.6,4.6,4.6,5.4,1.6,1.6,1.6,1.6,1.6,1.8,1.8,1.8,2,2.4,2.4,2.4,2.4,2.5,2.5,3.3,2,2,2,2,2.7,2.7,2.7,3,3.7,4,4.7,4.7,4.7,5.7,6.1,4,4.2,4.4,4.6,5.4,5.4,5.4,4,4,4.6,5,2.4,2.4,2.5,2.5,3.5,3.5,3,3,3.5,3.3,3.3,4,5.6,3.1,3.8,3.8,3.8,5.3,2.5,2.5,2.5,2.5,2.5,2.5,2.2,2.2,2.5,2.5,2.5,2.5,2.5,2.5,2.7,2.7,3.4,3.4,4,4.7,2.2,2.2,2.4,2.4,3,3,3.5,2.2,2.2,2.4,2.4,3,3,3.3,1.8,1.8,1.8,1.8,1.8,4.7,5.7,2.7,2.7,2.7,3.4,3.4,4,4,2,2,2,2,2.8,1.9,2,2,2,2,2.5,2.5,2.8,2.8,1.9,1.9,2,2,2.5,2.5,1.8,1.8,2,2,2.8,2.8,3.6],"y":[29,29,31,30,26,26,27,26,25,28,27,25,25,25,25,24,25,23,20,15,20,17,17,26,23,26,25,24,19,14,15,17,27,30,26,29,26,24,24,22,22,24,24,17,22,21,23,23,19,18,17,17,19,19,12,17,15,17,17,12,17,16,18,15,16,12,17,17,16,12,15,16,17,15,17,17,18,17,19,17,19,19,17,17,17,16,16,17,15,17,26,25,26,24,21,22,23,22,20,33,32,32,29,32,34,36,36,29,26,27,30,31,26,26,28,26,29,28,27,24,24,24,22,19,20,17,12,19,18,14,15,18,18,15,17,16,18,17,19,19,17,29,27,31,32,27,26,26,25,25,17,17,20,18,26,26,27,28,25,25,24,27,25,26,23,26,26,26,26,25,27,25,27,20,20,19,17,20,17,29,27,31,31,26,26,28,27,29,31,31,26,26,27,30,33,35,37,35,15,18,20,20,22,17,19,18,20,29,26,29,29,24,44,29,26,29,29,29,29,23,24,44,41,29,26,28,29,29,29,28,29,26,26,26],"text":["displ: 1.8<br />hwy: 29","displ: 1.8<br />hwy: 29","displ: 2.0<br />hwy: 31","displ: 2.0<br />hwy: 30","displ: 2.8<br />hwy: 26","displ: 2.8<br />hwy: 26","displ: 3.1<br />hwy: 27","displ: 1.8<br />hwy: 26","displ: 1.8<br />hwy: 25","displ: 2.0<br />hwy: 28","displ: 2.0<br />hwy: 27","displ: 2.8<br />hwy: 25","displ: 2.8<br />hwy: 25","displ: 3.1<br />hwy: 25","displ: 3.1<br />hwy: 25","displ: 2.8<br />hwy: 24","displ: 3.1<br />hwy: 25","displ: 4.2<br />hwy: 23","displ: 5.3<br />hwy: 20","displ: 5.3<br />hwy: 15","displ: 5.3<br />hwy: 20","displ: 5.7<br />hwy: 17","displ: 6.0<br />hwy: 17","displ: 5.7<br />hwy: 26","displ: 5.7<br />hwy: 23","displ: 6.2<br />hwy: 26","displ: 6.2<br />hwy: 25","displ: 7.0<br />hwy: 24","displ: 5.3<br />hwy: 19","displ: 5.3<br />hwy: 14","displ: 5.7<br />hwy: 15","displ: 6.5<br />hwy: 17","displ: 2.4<br />hwy: 27","displ: 2.4<br />hwy: 30","displ: 3.1<br />hwy: 26","displ: 3.5<br />hwy: 29","displ: 3.6<br />hwy: 26","displ: 2.4<br />hwy: 24","displ: 3.0<br />hwy: 24","displ: 3.3<br />hwy: 22","displ: 3.3<br />hwy: 22","displ: 3.3<br />hwy: 24","displ: 3.3<br />hwy: 24","displ: 3.3<br />hwy: 17","displ: 3.8<br />hwy: 22","displ: 3.8<br />hwy: 21","displ: 3.8<br />hwy: 23","displ: 4.0<br />hwy: 23","displ: 3.7<br />hwy: 19","displ: 3.7<br />hwy: 18","displ: 3.9<br />hwy: 17","displ: 3.9<br />hwy: 17","displ: 4.7<br />hwy: 19","displ: 4.7<br />hwy: 19","displ: 4.7<br />hwy: 12","displ: 5.2<br />hwy: 17","displ: 5.2<br />hwy: 15","displ: 3.9<br />hwy: 17","displ: 4.7<br />hwy: 17","displ: 4.7<br />hwy: 12","displ: 4.7<br />hwy: 17","displ: 5.2<br />hwy: 16","displ: 5.7<br />hwy: 18","displ: 5.9<br />hwy: 15","displ: 4.7<br />hwy: 16","displ: 4.7<br />hwy: 12","displ: 4.7<br />hwy: 17","displ: 4.7<br />hwy: 17","displ: 4.7<br />hwy: 16","displ: 4.7<br />hwy: 12","displ: 5.2<br />hwy: 15","displ: 5.2<br />hwy: 16","displ: 5.7<br />hwy: 17","displ: 5.9<br />hwy: 15","displ: 4.6<br />hwy: 17","displ: 5.4<br />hwy: 17","displ: 5.4<br />hwy: 18","displ: 4.0<br />hwy: 17","displ: 4.0<br />hwy: 19","displ: 4.0<br />hwy: 17","displ: 4.0<br />hwy: 19","displ: 4.6<br />hwy: 19","displ: 5.0<br />hwy: 17","displ: 4.2<br />hwy: 17","displ: 4.2<br />hwy: 17","displ: 4.6<br />hwy: 16","displ: 4.6<br />hwy: 16","displ: 4.6<br />hwy: 17","displ: 5.4<br />hwy: 15","displ: 5.4<br />hwy: 17","displ: 3.8<br />hwy: 26","displ: 3.8<br />hwy: 25","displ: 4.0<br />hwy: 26","displ: 4.0<br />hwy: 24","displ: 4.6<br />hwy: 21","displ: 4.6<br />hwy: 22","displ: 4.6<br />hwy: 23","displ: 4.6<br />hwy: 22","displ: 5.4<br />hwy: 20","displ: 1.6<br />hwy: 33","displ: 1.6<br />hwy: 32","displ: 1.6<br />hwy: 32","displ: 1.6<br />hwy: 29","displ: 1.6<br />hwy: 32","displ: 1.8<br />hwy: 34","displ: 1.8<br />hwy: 36","displ: 1.8<br />hwy: 36","displ: 2.0<br />hwy: 29","displ: 2.4<br />hwy: 26","displ: 2.4<br />hwy: 27","displ: 2.4<br />hwy: 30","displ: 2.4<br />hwy: 31","displ: 2.5<br />hwy: 26","displ: 2.5<br />hwy: 26","displ: 3.3<br />hwy: 28","displ: 2.0<br />hwy: 26","displ: 2.0<br />hwy: 29","displ: 2.0<br />hwy: 28","displ: 2.0<br />hwy: 27","displ: 2.7<br />hwy: 24","displ: 2.7<br />hwy: 24","displ: 2.7<br />hwy: 24","displ: 3.0<br />hwy: 22","displ: 3.7<br />hwy: 19","displ: 4.0<br />hwy: 20","displ: 4.7<br />hwy: 17","displ: 4.7<br />hwy: 12","displ: 4.7<br />hwy: 19","displ: 5.7<br />hwy: 18","displ: 6.1<br />hwy: 14","displ: 4.0<br />hwy: 15","displ: 4.2<br />hwy: 18","displ: 4.4<br />hwy: 18","displ: 4.6<br />hwy: 15","displ: 5.4<br />hwy: 17","displ: 5.4<br />hwy: 16","displ: 5.4<br />hwy: 18","displ: 4.0<br />hwy: 17","displ: 4.0<br />hwy: 19","displ: 4.6<br />hwy: 19","displ: 5.0<br />hwy: 17","displ: 2.4<br />hwy: 29","displ: 2.4<br />hwy: 27","displ: 2.5<br />hwy: 31","displ: 2.5<br />hwy: 32","displ: 3.5<br />hwy: 27","displ: 3.5<br />hwy: 26","displ: 3.0<br />hwy: 26","displ: 3.0<br />hwy: 25","displ: 3.5<br />hwy: 25","displ: 3.3<br />hwy: 17","displ: 3.3<br />hwy: 17","displ: 4.0<br />hwy: 20","displ: 5.6<br />hwy: 18","displ: 3.1<br />hwy: 26","displ: 3.8<br />hwy: 26","displ: 3.8<br />hwy: 27","displ: 3.8<br />hwy: 28","displ: 5.3<br />hwy: 25","displ: 2.5<br />hwy: 25","displ: 2.5<br />hwy: 24","displ: 2.5<br />hwy: 27","displ: 2.5<br />hwy: 25","displ: 2.5<br />hwy: 26","displ: 2.5<br />hwy: 23","displ: 2.2<br />hwy: 26","displ: 2.2<br />hwy: 26","displ: 2.5<br />hwy: 26","displ: 2.5<br />hwy: 26","displ: 2.5<br />hwy: 25","displ: 2.5<br />hwy: 27","displ: 2.5<br />hwy: 25","displ: 2.5<br />hwy: 27","displ: 2.7<br />hwy: 20","displ: 2.7<br />hwy: 20","displ: 3.4<br />hwy: 19","displ: 3.4<br />hwy: 17","displ: 4.0<br />hwy: 20","displ: 4.7<br />hwy: 17","displ: 2.2<br />hwy: 29","displ: 2.2<br />hwy: 27","displ: 2.4<br />hwy: 31","displ: 2.4<br />hwy: 31","displ: 3.0<br />hwy: 26","displ: 3.0<br />hwy: 26","displ: 3.5<br />hwy: 28","displ: 2.2<br />hwy: 27","displ: 2.2<br />hwy: 29","displ: 2.4<br />hwy: 31","displ: 2.4<br />hwy: 31","displ: 3.0<br />hwy: 26","displ: 3.0<br />hwy: 26","displ: 3.3<br />hwy: 27","displ: 1.8<br />hwy: 30","displ: 1.8<br />hwy: 33","displ: 1.8<br />hwy: 35","displ: 1.8<br />hwy: 37","displ: 1.8<br />hwy: 35","displ: 4.7<br />hwy: 15","displ: 5.7<br />hwy: 18","displ: 2.7<br />hwy: 20","displ: 2.7<br />hwy: 20","displ: 2.7<br />hwy: 22","displ: 3.4<br />hwy: 17","displ: 3.4<br />hwy: 19","displ: 4.0<br />hwy: 18","displ: 4.0<br />hwy: 20","displ: 2.0<br />hwy: 29","displ: 2.0<br />hwy: 26","displ: 2.0<br />hwy: 29","displ: 2.0<br />hwy: 29","displ: 2.8<br />hwy: 24","displ: 1.9<br />hwy: 44","displ: 2.0<br />hwy: 29","displ: 2.0<br />hwy: 26","displ: 2.0<br />hwy: 29","displ: 2.0<br />hwy: 29","displ: 2.5<br />hwy: 29","displ: 2.5<br />hwy: 29","displ: 2.8<br />hwy: 23","displ: 2.8<br />hwy: 24","displ: 1.9<br />hwy: 44","displ: 1.9<br />hwy: 41","displ: 2.0<br />hwy: 29","displ: 2.0<br />hwy: 26","displ: 2.5<br />hwy: 28","displ: 2.5<br />hwy: 29","displ: 1.8<br />hwy: 29","displ: 1.8<br />hwy: 29","displ: 2.0<br />hwy: 28","displ: 2.0<br />hwy: 29","displ: 2.8<br />hwy: 26","displ: 2.8<br />hwy: 26","displ: 3.6<br />hwy: 26"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1.6,1.66835443037975,1.73670886075949,1.80506329113924,1.87341772151899,1.94177215189873,2.01012658227848,2.07848101265823,2.14683544303797,2.21518987341772,2.28354430379747,2.35189873417722,2.42025316455696,2.48860759493671,2.55696202531646,2.6253164556962,2.69367088607595,2.7620253164557,2.83037974683544,2.89873417721519,2.96708860759494,3.03544303797468,3.10379746835443,3.17215189873418,3.24050632911392,3.30886075949367,3.37721518987342,3.44556962025316,3.51392405063291,3.58227848101266,3.65063291139241,3.71898734177215,3.7873417721519,3.85569620253165,3.92405063291139,3.99240506329114,4.06075949367089,4.12911392405063,4.19746835443038,4.26582278481013,4.33417721518987,4.40253164556962,4.47088607594937,4.53924050632911,4.60759493670886,4.67594936708861,4.74430379746835,4.8126582278481,4.88101265822785,4.94936708860759,5.01772151898734,5.08607594936709,5.15443037974684,5.22278481012658,5.29113924050633,5.35949367088608,5.42784810126582,5.49620253164557,5.56455696202532,5.63291139240506,5.70126582278481,5.76962025316456,5.8379746835443,5.90632911392405,5.9746835443038,6.04303797468354,6.11139240506329,6.17974683544304,6.24810126582278,6.31645569620253,6.38481012658228,6.45316455696203,6.52151898734177,6.58987341772152,6.65822784810127,6.72658227848101,6.79493670886076,6.86329113924051,6.93164556962025,7],"y":[33.0928566018538,32.5107835503571,31.9422202829389,31.3884848606775,30.8508953446512,30.3299957500339,29.8238589188101,29.3333742194062,28.8583851390524,28.3981429072318,27.9518987534274,27.5189039071224,27.0987631133077,26.6957836735878,26.3090818821465,25.9355884664112,25.5722341538095,25.2291795381194,24.9181938113842,24.6298749747968,24.3546740169542,24.0830419264527,23.8054739954333,23.5295892802633,23.2646362481893,23.0081062857482,22.7574907794764,22.5102811159107,22.2639686815878,22.0160448630443,21.7640010468168,21.5053286194421,21.2375189674567,20.9580634773974,20.6636946027661,20.3463825302921,20.0114403884548,19.667539399964,19.3233507875294,18.9875457738607,18.6687955816675,18.3757714336596,18.1171445525467,17.9015861610384,17.7374782618847,17.6038925094818,17.4844691691521,17.3803696350212,17.2927553012146,17.2227875618577,17.171627811076,17.1404374429951,17.1303778517404,17.1426104314374,17.1782965762116,17.236490288008,17.3142595889583,17.4115496666742,17.5283491704687,17.6646467496545,17.8204310535445,17.9956907314514,18.1904144326882,18.4045908065676,18.6382085024024,18.8912561695054,19.1637224571895,19.4555960147675,19.7668654915521,20.0975195368563,20.4475467999927,20.8169359302743,21.2056755770139,21.6137543895241,22.041161017118,22.4878841091082,22.9539123148077,23.4392342835291,23.9438386645854,24.4677141072894],"text":["displ: 1.600000<br />hwy: 33.09286","displ: 1.668354<br />hwy: 32.51078","displ: 1.736709<br />hwy: 31.94222","displ: 1.805063<br />hwy: 31.38848","displ: 1.873418<br />hwy: 30.85090","displ: 1.941772<br />hwy: 30.33000","displ: 2.010127<br />hwy: 29.82386","displ: 2.078481<br />hwy: 29.33337","displ: 2.146835<br />hwy: 28.85839","displ: 2.215190<br />hwy: 28.39814","displ: 2.283544<br />hwy: 27.95190","displ: 2.351899<br />hwy: 27.51890","displ: 2.420253<br />hwy: 27.09876","displ: 2.488608<br />hwy: 26.69578","displ: 2.556962<br />hwy: 26.30908","displ: 2.625316<br />hwy: 25.93559","displ: 2.693671<br />hwy: 25.57223","displ: 2.762025<br />hwy: 25.22918","displ: 2.830380<br />hwy: 24.91819","displ: 2.898734<br />hwy: 24.62987","displ: 2.967089<br />hwy: 24.35467","displ: 3.035443<br />hwy: 24.08304","displ: 3.103797<br />hwy: 23.80547","displ: 3.172152<br />hwy: 23.52959","displ: 3.240506<br />hwy: 23.26464","displ: 3.308861<br />hwy: 23.00811","displ: 3.377215<br />hwy: 22.75749","displ: 3.445570<br />hwy: 22.51028","displ: 3.513924<br />hwy: 22.26397","displ: 3.582278<br />hwy: 22.01604","displ: 3.650633<br />hwy: 21.76400","displ: 3.718987<br />hwy: 21.50533","displ: 3.787342<br />hwy: 21.23752","displ: 3.855696<br />hwy: 20.95806","displ: 3.924051<br />hwy: 20.66369","displ: 3.992405<br />hwy: 20.34638","displ: 4.060759<br />hwy: 20.01144","displ: 4.129114<br />hwy: 19.66754","displ: 4.197468<br />hwy: 19.32335","displ: 4.265823<br />hwy: 18.98755","displ: 4.334177<br />hwy: 18.66880","displ: 4.402532<br />hwy: 18.37577","displ: 4.470886<br />hwy: 18.11714","displ: 4.539241<br />hwy: 17.90159","displ: 4.607595<br />hwy: 17.73748","displ: 4.675949<br />hwy: 17.60389","displ: 4.744304<br />hwy: 17.48447","displ: 4.812658<br />hwy: 17.38037","displ: 4.881013<br />hwy: 17.29276","displ: 4.949367<br />hwy: 17.22279","displ: 5.017722<br />hwy: 17.17163","displ: 5.086076<br />hwy: 17.14044","displ: 5.154430<br />hwy: 17.13038","displ: 5.222785<br />hwy: 17.14261","displ: 5.291139<br />hwy: 17.17830","displ: 5.359494<br />hwy: 17.23649","displ: 5.427848<br />hwy: 17.31426","displ: 5.496203<br />hwy: 17.41155","displ: 5.564557<br />hwy: 17.52835","displ: 5.632911<br />hwy: 17.66465","displ: 5.701266<br />hwy: 17.82043","displ: 5.769620<br />hwy: 17.99569","displ: 5.837975<br />hwy: 18.19041","displ: 5.906329<br />hwy: 18.40459","displ: 5.974684<br />hwy: 18.63821","displ: 6.043038<br />hwy: 18.89126","displ: 6.111392<br />hwy: 19.16372","displ: 6.179747<br />hwy: 19.45560","displ: 6.248101<br />hwy: 19.76687","displ: 6.316456<br />hwy: 20.09752","displ: 6.384810<br />hwy: 20.44755","displ: 6.453165<br />hwy: 20.81694","displ: 6.521519<br />hwy: 21.20568","displ: 6.589873<br />hwy: 21.61375","displ: 6.658228<br />hwy: 22.04116","displ: 6.726582<br />hwy: 22.48788","displ: 6.794937<br />hwy: 22.95391","displ: 6.863291<br />hwy: 23.43923","displ: 6.931646<br />hwy: 23.94384","displ: 7.000000<br />hwy: 24.46771"],"type":"scatter","mode":"lines","name":"fitted values","line":{"width":3.77952755905512,"color":"rgba(51,102,255,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1.6,1.66835443037975,1.73670886075949,1.80506329113924,1.87341772151899,1.94177215189873,2.01012658227848,2.07848101265823,2.14683544303797,2.21518987341772,2.28354430379747,2.35189873417722,2.42025316455696,2.48860759493671,2.55696202531646,2.6253164556962,2.69367088607595,2.7620253164557,2.83037974683544,2.89873417721519,2.96708860759494,3.03544303797468,3.10379746835443,3.17215189873418,3.24050632911392,3.30886075949367,3.37721518987342,3.44556962025316,3.51392405063291,3.58227848101266,3.65063291139241,3.71898734177215,3.7873417721519,3.85569620253165,3.92405063291139,3.99240506329114,4.06075949367089,4.12911392405063,4.19746835443038,4.26582278481013,4.33417721518987,4.40253164556962,4.47088607594937,4.53924050632911,4.60759493670886,4.67594936708861,4.74430379746835,4.8126582278481,4.88101265822785,4.94936708860759,5.01772151898734,5.08607594936709,5.15443037974684,5.22278481012658,5.29113924050633,5.35949367088608,5.42784810126582,5.49620253164557,5.56455696202532,5.63291139240506,5.70126582278481,5.76962025316456,5.8379746835443,5.90632911392405,5.9746835443038,6.04303797468354,6.11139240506329,6.17974683544304,6.24810126582278,6.31645569620253,6.38481012658228,6.45316455696203,6.52151898734177,6.58987341772152,6.65822784810127,6.72658227848101,6.79493670886076,6.86329113924051,6.93164556962025,7,7,7,6.93164556962025,6.86329113924051,6.79493670886076,6.72658227848101,6.65822784810127,6.58987341772152,6.52151898734177,6.45316455696203,6.38481012658228,6.31645569620253,6.24810126582278,6.17974683544304,6.11139240506329,6.04303797468354,5.9746835443038,5.90632911392405,5.8379746835443,5.76962025316456,5.70126582278481,5.63291139240506,5.56455696202532,5.49620253164557,5.42784810126582,5.35949367088608,5.29113924050633,5.22278481012658,5.15443037974684,5.08607594936709,5.01772151898734,4.94936708860759,4.88101265822785,4.8126582278481,4.74430379746835,4.67594936708861,4.60759493670886,4.53924050632911,4.47088607594937,4.40253164556962,4.33417721518987,4.26582278481013,4.19746835443038,4.12911392405063,4.06075949367089,3.99240506329114,3.92405063291139,3.85569620253165,3.7873417721519,3.71898734177215,3.65063291139241,3.58227848101266,3.51392405063291,3.44556962025316,3.37721518987342,3.30886075949367,3.24050632911392,3.17215189873418,3.10379746835443,3.03544303797468,2.96708860759494,2.89873417721519,2.83037974683544,2.7620253164557,2.69367088607595,2.6253164556962,2.55696202531646,2.48860759493671,2.42025316455696,2.35189873417722,2.28354430379747,2.21518987341772,2.14683544303797,2.07848101265823,2.01012658227848,1.94177215189873,1.87341772151899,1.80506329113924,1.73670886075949,1.66835443037975,1.6,1.6],"y":[31.5502921741958,31.1439615496347,30.734766341174,30.3219174568165,29.9049715287249,29.483426427439,29.0546230954098,28.6191940644564,28.1781383521877,27.733165188184,27.2870808988393,26.8431891065526,26.4051327507517,25.9823949812496,25.5759219090576,25.1832547988793,24.8023931528773,24.4455018659603,24.1214382927233,23.8145276085106,23.5148523917237,23.2202429208538,22.9335208886165,22.6659912421514,22.419122021648,22.1841425160195,21.9523701781984,21.716169166381,21.4700300079552,21.2113377443099,20.9403757348464,20.6595519351853,20.3722850366144,20.0819821514625,19.7900608770642,19.4852250109723,19.1671348171781,18.8396841466058,18.5076154443181,18.1772560160021,17.857020684613,17.5574414737476,17.2906785924272,17.069694933759,16.9069745992304,16.7795028035949,16.6670937750876,16.5695395349039,16.4868393089263,16.4192917262173,16.3675400418557,16.3325551116914,16.3155489188277,16.3178229837809,16.3405653359364,16.3819090847767,16.4371370093744,16.5051767344106,16.5850224887057,16.6757594040711,16.7766265595726,16.8870537204214,17.0066695630085,17.1352859183229,17.2728667175174,17.4194909207075,17.5753166686961,17.7405508800896,17.9154258372097,18.1001825319467,18.2950596665187,18.500286958895,18.7160815031624,18.9426461741507,19.1801693243973,19.4288252461431,19.6887750454951,19.9601677023856,20.2431411773915,20.5378234847148,20.5378234847148,28.3976047298639,27.6445361517793,26.9183008646727,26.2190495841203,25.5469429720734,24.9021527098387,24.2848626048976,23.6952696508654,23.1335849016537,22.6000339334668,22.0948565417659,21.6183051458945,21.1706411494454,20.752128245683,20.3630214183034,20.0035502872874,19.6738956948123,19.374159302368,19.1043277424815,18.8642355475163,18.6535340952379,18.4716758522316,18.3179225989377,18.1913821685421,18.0910714912393,18.0160278164868,17.9673978790939,17.945206784653,17.9483197742987,17.9757155802963,18.026283397498,18.0986712935029,18.1911997351385,18.3018445632167,18.4282822153687,18.567981924539,18.7334773883177,18.9436105126661,19.1941013935716,19.4805704787221,19.7978355317193,20.1390861307408,20.4953946533223,20.8557459597315,21.2075400496118,21.537328328468,21.8341448033324,22.1027528982991,22.3511053036989,22.5876263587873,22.8207519817787,23.0579073552204,23.3043930654405,23.5626113807545,23.8320700554769,24.1101504747306,24.3931873183752,24.6774271022502,24.9458409320517,25.1944956421846,25.4452223410831,25.714949330045,26.0128572102785,26.3420751547416,26.6879221339431,27.0422418552354,27.4091723659259,27.7923934758638,28.1946187076923,28.6167166080156,29.0631206262796,29.5386319259172,30.047554374356,30.5930947422104,31.1765650726287,31.7968191605775,32.4550522645386,33.1496742247038,33.8776055510794,34.6354210295117,31.5502921741958],"text":["displ: 1.600000<br />hwy: 33.09286","displ: 1.668354<br />hwy: 32.51078","displ: 1.736709<br />hwy: 31.94222","displ: 1.805063<br />hwy: 31.38848","displ: 1.873418<br />hwy: 30.85090","displ: 1.941772<br />hwy: 30.33000","displ: 2.010127<br />hwy: 29.82386","displ: 2.078481<br />hwy: 29.33337","displ: 2.146835<br />hwy: 28.85839","displ: 2.215190<br />hwy: 28.39814","displ: 2.283544<br />hwy: 27.95190","displ: 2.351899<br />hwy: 27.51890","displ: 2.420253<br />hwy: 27.09876","displ: 2.488608<br />hwy: 26.69578","displ: 2.556962<br />hwy: 26.30908","displ: 2.625316<br />hwy: 25.93559","displ: 2.693671<br />hwy: 25.57223","displ: 2.762025<br />hwy: 25.22918","displ: 2.830380<br />hwy: 24.91819","displ: 2.898734<br />hwy: 24.62987","displ: 2.967089<br />hwy: 24.35467","displ: 3.035443<br />hwy: 24.08304","displ: 3.103797<br />hwy: 23.80547","displ: 3.172152<br />hwy: 23.52959","displ: 3.240506<br />hwy: 23.26464","displ: 3.308861<br />hwy: 23.00811","displ: 3.377215<br />hwy: 22.75749","displ: 3.445570<br />hwy: 22.51028","displ: 3.513924<br />hwy: 22.26397","displ: 3.582278<br />hwy: 22.01604","displ: 3.650633<br />hwy: 21.76400","displ: 3.718987<br />hwy: 21.50533","displ: 3.787342<br />hwy: 21.23752","displ: 3.855696<br />hwy: 20.95806","displ: 3.924051<br />hwy: 20.66369","displ: 3.992405<br />hwy: 20.34638","displ: 4.060759<br />hwy: 20.01144","displ: 4.129114<br />hwy: 19.66754","displ: 4.197468<br />hwy: 19.32335","displ: 4.265823<br />hwy: 18.98755","displ: 4.334177<br />hwy: 18.66880","displ: 4.402532<br />hwy: 18.37577","displ: 4.470886<br />hwy: 18.11714","displ: 4.539241<br />hwy: 17.90159","displ: 4.607595<br />hwy: 17.73748","displ: 4.675949<br />hwy: 17.60389","displ: 4.744304<br />hwy: 17.48447","displ: 4.812658<br />hwy: 17.38037","displ: 4.881013<br />hwy: 17.29276","displ: 4.949367<br />hwy: 17.22279","displ: 5.017722<br />hwy: 17.17163","displ: 5.086076<br />hwy: 17.14044","displ: 5.154430<br />hwy: 17.13038","displ: 5.222785<br />hwy: 17.14261","displ: 5.291139<br />hwy: 17.17830","displ: 5.359494<br />hwy: 17.23649","displ: 5.427848<br />hwy: 17.31426","displ: 5.496203<br />hwy: 17.41155","displ: 5.564557<br />hwy: 17.52835","displ: 5.632911<br />hwy: 17.66465","displ: 5.701266<br />hwy: 17.82043","displ: 5.769620<br />hwy: 17.99569","displ: 5.837975<br />hwy: 18.19041","displ: 5.906329<br />hwy: 18.40459","displ: 5.974684<br />hwy: 18.63821","displ: 6.043038<br />hwy: 18.89126","displ: 6.111392<br />hwy: 19.16372","displ: 6.179747<br />hwy: 19.45560","displ: 6.248101<br />hwy: 19.76687","displ: 6.316456<br />hwy: 20.09752","displ: 6.384810<br />hwy: 20.44755","displ: 6.453165<br />hwy: 20.81694","displ: 6.521519<br />hwy: 21.20568","displ: 6.589873<br />hwy: 21.61375","displ: 6.658228<br />hwy: 22.04116","displ: 6.726582<br />hwy: 22.48788","displ: 6.794937<br />hwy: 22.95391","displ: 6.863291<br />hwy: 23.43923","displ: 6.931646<br />hwy: 23.94384","displ: 7.000000<br />hwy: 24.46771","displ: 7.000000<br />hwy: 24.46771","displ: 7.000000<br />hwy: 24.46771","displ: 6.931646<br />hwy: 23.94384","displ: 6.863291<br />hwy: 23.43923","displ: 6.794937<br />hwy: 22.95391","displ: 6.726582<br />hwy: 22.48788","displ: 6.658228<br />hwy: 22.04116","displ: 6.589873<br />hwy: 21.61375","displ: 6.521519<br />hwy: 21.20568","displ: 6.453165<br />hwy: 20.81694","displ: 6.384810<br />hwy: 20.44755","displ: 6.316456<br />hwy: 20.09752","displ: 6.248101<br />hwy: 19.76687","displ: 6.179747<br />hwy: 19.45560","displ: 6.111392<br />hwy: 19.16372","displ: 6.043038<br />hwy: 18.89126","displ: 5.974684<br />hwy: 18.63821","displ: 5.906329<br />hwy: 18.40459","displ: 5.837975<br />hwy: 18.19041","displ: 5.769620<br />hwy: 17.99569","displ: 5.701266<br />hwy: 17.82043","displ: 5.632911<br />hwy: 17.66465","displ: 5.564557<br />hwy: 17.52835","displ: 5.496203<br />hwy: 17.41155","displ: 5.427848<br />hwy: 17.31426","displ: 5.359494<br />hwy: 17.23649","displ: 5.291139<br />hwy: 17.17830","displ: 5.222785<br />hwy: 17.14261","displ: 5.154430<br />hwy: 17.13038","displ: 5.086076<br />hwy: 17.14044","displ: 5.017722<br />hwy: 17.17163","displ: 4.949367<br />hwy: 17.22279","displ: 4.881013<br />hwy: 17.29276","displ: 4.812658<br />hwy: 17.38037","displ: 4.744304<br />hwy: 17.48447","displ: 4.675949<br />hwy: 17.60389","displ: 4.607595<br />hwy: 17.73748","displ: 4.539241<br />hwy: 17.90159","displ: 4.470886<br />hwy: 18.11714","displ: 4.402532<br />hwy: 18.37577","displ: 4.334177<br />hwy: 18.66880","displ: 4.265823<br />hwy: 18.98755","displ: 4.197468<br />hwy: 19.32335","displ: 4.129114<br />hwy: 19.66754","displ: 4.060759<br />hwy: 20.01144","displ: 3.992405<br />hwy: 20.34638","displ: 3.924051<br />hwy: 20.66369","displ: 3.855696<br />hwy: 20.95806","displ: 3.787342<br />hwy: 21.23752","displ: 3.718987<br />hwy: 21.50533","displ: 3.650633<br />hwy: 21.76400","displ: 3.582278<br />hwy: 22.01604","displ: 3.513924<br />hwy: 22.26397","displ: 3.445570<br />hwy: 22.51028","displ: 3.377215<br />hwy: 22.75749","displ: 3.308861<br />hwy: 23.00811","displ: 3.240506<br />hwy: 23.26464","displ: 3.172152<br />hwy: 23.52959","displ: 3.103797<br />hwy: 23.80547","displ: 3.035443<br />hwy: 24.08304","displ: 2.967089<br />hwy: 24.35467","displ: 2.898734<br />hwy: 24.62987","displ: 2.830380<br />hwy: 24.91819","displ: 2.762025<br />hwy: 25.22918","displ: 2.693671<br />hwy: 25.57223","displ: 2.625316<br />hwy: 25.93559","displ: 2.556962<br />hwy: 26.30908","displ: 2.488608<br />hwy: 26.69578","displ: 2.420253<br />hwy: 27.09876","displ: 2.351899<br />hwy: 27.51890","displ: 2.283544<br />hwy: 27.95190","displ: 2.215190<br />hwy: 28.39814","displ: 2.146835<br />hwy: 28.85839","displ: 2.078481<br />hwy: 29.33337","displ: 2.010127<br />hwy: 29.82386","displ: 1.941772<br />hwy: 30.33000","displ: 1.873418<br />hwy: 30.85090","displ: 1.805063<br />hwy: 31.38848","displ: 1.736709<br />hwy: 31.94222","displ: 1.668354<br />hwy: 32.51078","displ: 1.600000<br />hwy: 33.09286","displ: 1.600000<br />hwy: 33.09286"],"type":"scatter","mode":"lines","line":{"width":3.77952755905512,"color":"transparent","dash":"solid"},"fill":"toself","fillcolor":"rgba(153,153,153,0.4)","hoveron":"points","hoverinfo":"x+y","showlegend":false,"xaxis":"x","yaxis":"y","frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":40.1826484018265,"l":37.2602739726027},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.33,7.27],"tickmode":"array","ticktext":["2","3","4","5","6","7"],"tickvals":[2,3,4,5,6,7],"categoryorder":"array","categoryarray":["2","3","4","5","6","7"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"displ","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[10.4,45.6],"tickmode":"array","ticktext":["20","30","40"],"tickvals":[20,30,40],"categoryorder":"array","categoryarray":["20","30","40"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"hwy","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"c8018b81b50":{"x":{},"y":{},"type":"scatter"},"c8033ef3f":{"x":{},"y":{}}},"cur_data":"c8018b81b50","visdat":{"c8018b81b50":["function (y) ","x"],"c8033ef3f":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
 <p>It is also possible to create figures from static images:</p>
 <div id="fig-logo" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -445,7 +424,7 @@ x_L \\ x_N \end{array}\right] \\
 <div class="cell">
 <details open="">
 <summary>Hide/Show the code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">summary</span>(cars), <span class="at">caption =</span> <span class="st">"Table caption."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">summary</span>(cars), <span class="at">caption =</span> <span class="st">"Table caption."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
@@ -493,36 +472,14 @@ x_L \\ x_N \end{array}\right] \\
 </div>
 </div>
 </section>
-<section id="algorithms" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="algorithms"><span class="header-section-number">2.6</span> Algorithms</h2>
-<p>A solution to typeset pseudocode just like you would do with <span class="math inline">\LaTeX</span>, yet with HTML output is to rely on the JavaScript <a href="https://github.com/SaswatPadhi/pseudocode.js">peudocode.js</a>. Your pseudocode is written inside a <code>&lt;pre&gt;</code> tag. You need to modify the file <code>includes/pseudocode-footer.html</code> so that the <code>Id</code> of the rendered element match the one in <code>&lt;pre id =""&gt;</code>. The result is as follows:</p>
-<div id="algo-label">
-<pre id="myalgo">
-\begin{algorithm}
-\caption{A simple Algorithm}
-\begin{algorithmic}
-\STATE \textbf{Data}: $\mathcal{X} = \{x_1, \dots, x_n\}$
-\STATE optimization parameters: number of iterations $T$, learning rate $\eta$
-\STATE \textbf{Result}: output $\mathcal{Y} = \{y_1, \dots, y_n\}$
-\PROCEDURE{myproc}{$T$, $\eta$}
-    \FOR{$t = 0$ \TO $T$}
-        \STATE do something (and fast please)
-    \ENDFOR
-\ENDPROCEDURE
-\end{algorithmic}
-\end{algorithm}
-
-</pre>
-</div>
-</section>
-<section id="sec-references" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="sec-references"><span class="header-section-number">2.7</span> Handling references</h2>
-<section id="bibliographic-references" class="level3" data-number="2.7.1">
-<h3 data-number="2.7.1" class="anchored" data-anchor-id="bibliographic-references"><span class="header-section-number">2.7.1</span> Bibliographic references</h3>
+<section id="sec-references" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="sec-references"><span class="header-section-number">2.6</span> Handling references</h2>
+<section id="bibliographic-references" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="bibliographic-references"><span class="header-section-number">2.6.1</span> Bibliographic references</h3>
 <p>References are displayed as footnotes using <a href="http://www.bibtex.org/">BibTeX</a>, e.g.&nbsp;<code>[@computo]</code> will be displayed as <span class="citation" data-cites="computo">(<a href="#ref-computo" role="doc-biblioref">Computo Team 2021</a>)</span>, where <code>computo</code> is the bibtex key for this specific entry. The bibliographic information is automatically retrieved from the <code>.bib</code> file specified in the header of this document (here: <code>references.bib</code>).</p>
 </section>
-<section id="other-cross-references" class="level3" data-number="2.7.2">
-<h3 data-number="2.7.2" class="anchored" data-anchor-id="other-cross-references"><span class="header-section-number">2.7.2</span> Other cross-references</h3>
+<section id="other-cross-references" class="level3" data-number="2.6.2">
+<h3 data-number="2.6.2" class="anchored" data-anchor-id="other-cross-references"><span class="header-section-number">2.6.2</span> Other cross-references</h3>
 <p>As already (partially) seen, Quarto includes a mecanism similar to the bibliographic references for sections, equations, theorems, figures, lists, etc. Have a look at <a href="https://quarto.org/docs/authoring/cross-references.html">this page</a>.</p>
 <div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -535,7 +492,7 @@ For more information
 </div>
 <div class="callout-body-container callout-body">
 <p><a href="https://computo.sfds.asso.fr/published-paper-tsne/">Check our mock version of the t-SNE paper</a> for a full and advanced example using the Jupyter kernel.</p>
-<p><a href="https://computo.sfds.asso.fr/published-paper-tsne/">The template available in the Computo Quarto extension</a> uses advanced features and the KnitR kernel.</p>
+<p><a href="https://computo.sfds.asso.fr/published-paper-tsne/">The template available in the Computo Quarto extension</a> uses advanced features and the KnitR kernel (interactive plots and pseudocode).</p>
 </div>
 </div>
 </section>
@@ -553,7 +510,7 @@ For more information
 <div class="cell">
 <details open="">
 <summary>Hide/Show the code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.2.2 (2022-10-31)
@@ -573,23 +530,21 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] plotly_4.10.1 ggplot2_3.4.0
+[1] ggplot2_3.4.0
 
 loaded via a namespace (and not attached):
- [1] reticulate_1.26   tidyselect_1.2.0  xfun_0.35         purrr_0.3.5      
- [5] splines_4.2.2     lattice_0.20-45   colorspace_2.0-3  vctrs_0.5.1      
- [9] generics_0.1.3    viridisLite_0.4.1 htmltools_0.5.3   yaml_2.3.6       
-[13] mgcv_1.8-41       utf8_1.2.2        rlang_1.0.6       pillar_1.8.1     
-[17] glue_1.6.2        withr_2.5.0       DBI_1.1.3         lifecycle_1.0.3  
-[21] stringr_1.4.1     munsell_0.5.0     gtable_0.3.1      htmlwidgets_1.5.4
-[25] evaluate_0.18     labeling_0.4.2    knitr_1.41        fastmap_1.1.0    
-[29] crosstalk_1.2.0   fansi_1.0.3       highr_0.9         Rcpp_1.0.9       
-[33] scales_1.2.1      jsonlite_1.8.3    farver_2.1.1      png_0.1-7        
-[37] digest_0.6.30     stringi_1.7.8     dplyr_1.0.10      grid_4.2.2       
-[41] cli_3.4.1         tools_4.2.2       magrittr_2.0.3    lazyeval_0.2.2   
-[45] tibble_3.1.8      tidyr_1.2.1       pkgconfig_2.0.3   Matrix_1.5-3     
-[49] data.table_1.14.6 assertthat_0.2.1  rmarkdown_2.18    httr_1.4.4       
-[53] R6_2.5.1          nlme_3.1-160      compiler_4.2.2   </code></pre>
+ [1] Rcpp_1.0.9        highr_0.9         compiler_4.2.2    pillar_1.8.1     
+ [5] tools_4.2.2       digest_0.6.30     nlme_3.1-160      jsonlite_1.8.3   
+ [9] evaluate_0.18     lifecycle_1.0.3   tibble_3.1.8      gtable_0.3.1     
+[13] lattice_0.20-45   mgcv_1.8-41       pkgconfig_2.0.3   png_0.1-7        
+[17] rlang_1.0.6       Matrix_1.5-3      DBI_1.1.3         cli_3.4.1        
+[21] yaml_2.3.6        xfun_0.35         fastmap_1.1.0     withr_2.5.0      
+[25] stringr_1.4.1     dplyr_1.0.10      knitr_1.41        generics_0.1.3   
+[29] htmlwidgets_1.5.4 vctrs_0.5.1       tidyselect_1.2.0  grid_4.2.2       
+[33] reticulate_1.26   glue_1.6.2        R6_2.5.1          fansi_1.0.3      
+[37] rmarkdown_2.18    farver_2.1.1      magrittr_2.0.3    splines_4.2.2    
+[41] scales_1.2.1      htmltools_0.5.3   assertthat_0.2.1  colorspace_2.0-3 
+[45] labeling_0.4.2    utf8_1.2.2        stringi_1.7.8     munsell_0.5.0    </code></pre>
 </div>
 </div>
 <!-- -->
@@ -832,276 +787,244 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Template for contribution to Computo"</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Example based on the quarto system"</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: "The Computo team"</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co">    corresponding: true</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co">    email: computo@sfds.asso.fr</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co">    url: https://computo.sfds.asso.fr</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co">    orcid: 0000-0000-0000-0000</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co">    affiliations:</span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co">      - name: Société Française de Statistique</span></span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co">        department: Statistique</span></span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="co">        address: IHP</span></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="co">        city: Paris</span></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co">        country: France</span></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co">        postal-code: 75005</span></span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="co">        url: https://www.sfds.asso.fr/</span></span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> last-modified</span></span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> |</span></span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="co">  This document provides a template based on the quarto system for contributions to Computo, using the jounral extension and the knitr kernel (R user).</span></span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="an">abstract:</span><span class="co"> &gt;+</span></span>
-<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co">  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere vestibulum facilisis. Aenean pretium orci augue, quis lobortis libero accumsan eu. Nam mollis lorem sit amet pellentesque ullamcorper. Curabitur lobortis libero eget malesuada vestibulum. Nam nec nibh massa. Pellentesque porttitor cursus tellus. Mauris urna erat, rhoncus sed faucibus sit amet, venenatis eu ipsum.</span></span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="an">keywords:</span><span class="co"> [key1, key2, key3]</span></span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="an">citation:</span></span>
-<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="co">  type: article-journal</span></span>
-<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a><span class="co">  container-title: "Computo"</span></span>
-<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="co">  doi: "xxxx"</span></span>
-<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a><span class="co">  url: https://computo.sfds.asso.fr/template-computo-quarto</span></span>
-<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> references.bib</span></span>
-<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a><span class="an">github-user:</span><span class="co"> computorg</span></span>
-<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a><span class="an">repo:</span><span class="co"> "template-computo-quarto"</span></span>
-<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a><span class="an">draft:</span><span class="co"> true # set to false once the build is running</span></span>
-<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a><span class="an">published:</span><span class="co"> false # will be set to true once accepted</span></span>
-<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a><span class="co">  computo-html: default</span></span>
-<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
-<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## About this document</span></span>
-<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>This document provides a template based on the <span class="co">[</span><span class="ot">quarto system</span><span class="co">](https://quarto.org/)</span> for contributions to **Computo** @computo. We show how <span class="in">`Python`</span> <span class="co">[</span><span class="ot">@perez2011python</span><span class="co">]</span> or  <span class="in">`R`</span> <span class="co">[</span><span class="ot">@R-base</span><span class="co">]</span> code can be included.</span>
-<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## Advice for writting your manuscript</span></span>
-<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a>First make sure that you are able to build your manuscript as a regular notebook on your system. Then you can start configure the binder environment.</span>
-<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a><span class="fu"># Formatting</span></span>
-<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a>This section covers basic formatting guidelines. <span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org/)</span> is a versatile  formatting system for authoring HTML based on markdown, integrating $\LaTeX$ and various code block interpreted either via Jupyter or Knitr (and thus deal with Python, R and many other langages). It relies on the <span class="co">[</span><span class="ot">Pandoc Markdown</span><span class="co">](https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html)</span> markup language.</span>
-<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a>To render/compile a document, run <span class="in">`quarto render`</span>. A document will be generated that includes both content as well as the output of any embedded code chunks within the document:</span>
-<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a><span class="in">``` .bash</span></span>
-<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render content.qmd <span class="co"># will render to html</span></span>
-<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a><span class="fu">## Basic markdown formatting</span></span>
-<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a>**Bold text** or _italic_</span>
-<span id="cb12-61"><a href="#cb12-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-62"><a href="#cb12-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>This is a list</span>
-<span id="cb12-63"><a href="#cb12-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>With more elements</span>
-<span id="cb12-64"><a href="#cb12-64" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>It isn't numbered.</span>
-<span id="cb12-65"><a href="#cb12-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-66"><a href="#cb12-66" aria-hidden="true" tabindex="-1"></a>But we can also do a numbered list</span>
-<span id="cb12-67"><a href="#cb12-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-68"><a href="#cb12-68" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>This is my first item</span>
-<span id="cb12-69"><a href="#cb12-69" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>This is my second item</span>
-<span id="cb12-70"><a href="#cb12-70" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>This is my third item</span>
-<span id="cb12-71"><a href="#cb12-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-72"><a href="#cb12-72" aria-hidden="true" tabindex="-1"></a><span class="fu">## Mathematics</span></span>
-<span id="cb12-73"><a href="#cb12-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-74"><a href="#cb12-74" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mathematical formulae</span></span>
-<span id="cb12-75"><a href="#cb12-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-76"><a href="#cb12-76" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">LaTeX</span><span class="co">](https://www.latex-project.org/)</span> code is natively supported<span class="ot">[^katex]</span>, which makes it possible to use mathematical formulae:</span>
-<span id="cb12-77"><a href="#cb12-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-78"><a href="#cb12-78" aria-hidden="true" tabindex="-1"></a><span class="ot">[^katex]: </span>We use <span class="co">[</span><span class="ot">katex</span><span class="co">](https://katex.org/)</span> for this purpose.</span>
-<span id="cb12-79"><a href="#cb12-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-80"><a href="#cb12-80" aria-hidden="true" tabindex="-1"></a>will render</span>
-<span id="cb12-81"><a href="#cb12-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-82"><a href="#cb12-82" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb12-83"><a href="#cb12-83" aria-hidden="true" tabindex="-1"></a>f(x_1, \dots, x_n; \mu, \sigma^2) =</span>
-<span id="cb12-84"><a href="#cb12-84" aria-hidden="true" tabindex="-1"></a>\frac{1}{\sigma \sqrt{2\pi}} \exp{\left(- \frac{1}{2\sigma^2}\sum_{i=1}^n(x_i - \mu)^2\right)}</span>
-<span id="cb12-85"><a href="#cb12-85" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb12-86"><a href="#cb12-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-87"><a href="#cb12-87" aria-hidden="true" tabindex="-1"></a>It is also posible to cross-reference an equation, see @eq-mylabel:</span>
-<span id="cb12-88"><a href="#cb12-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-89"><a href="#cb12-89" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb12-90"><a href="#cb12-90" aria-hidden="true" tabindex="-1"></a>\begin{aligned}</span>
-<span id="cb12-91"><a href="#cb12-91" aria-hidden="true" tabindex="-1"></a>D_{x_N} &amp; = \frac12</span>
-<span id="cb12-92"><a href="#cb12-92" aria-hidden="true" tabindex="-1"></a>\left[\begin{array}{cc}</span>
-<span id="cb12-93"><a href="#cb12-93" aria-hidden="true" tabindex="-1"></a>x_L^\top &amp; x_N^\top \end{array}\right] \,</span>
-<span id="cb12-94"><a href="#cb12-94" aria-hidden="true" tabindex="-1"></a>\left<span class="co">[</span><span class="ot">\begin{array}{cc}  L_L &amp; B \\ B^\top &amp; L_N \end{array}\right</span><span class="co">]</span> \,</span>
-<span id="cb12-95"><a href="#cb12-95" aria-hidden="true" tabindex="-1"></a>\left[\begin{array}{c}</span>
-<span id="cb12-96"><a href="#cb12-96" aria-hidden="true" tabindex="-1"></a>x_L <span class="sc">\\</span> x_N \end{array}\right] <span class="sc">\\</span></span>
-<span id="cb12-97"><a href="#cb12-97" aria-hidden="true" tabindex="-1"></a>&amp; = \frac12 (x_L^\top L_L x_L + 2 x_N^\top B^\top x_L + x_N^\top L_N x_N),</span>
-<span id="cb12-98"><a href="#cb12-98" aria-hidden="true" tabindex="-1"></a>\end{aligned}</span>
-<span id="cb12-99"><a href="#cb12-99" aria-hidden="true" tabindex="-1"></a>$$ {#eq-mylabel}</span>
-<span id="cb12-100"><a href="#cb12-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-101"><a href="#cb12-101" aria-hidden="true" tabindex="-1"></a><span class="fu">### Theorems and other amsthem-like environments</span></span>
-<span id="cb12-102"><a href="#cb12-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-103"><a href="#cb12-103" aria-hidden="true" tabindex="-1"></a>Quarto includes a nice support for theorems, with predefined prefix labels for theorems, lemmas, proposition, etc. see <span class="co">[</span><span class="ot">this page</span><span class="co">](https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs)</span>. Here is a simple example:</span>
-<span id="cb12-104"><a href="#cb12-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-105"><a href="#cb12-105" aria-hidden="true" tabindex="-1"></a>::: {#thm-slln}</span>
-<span id="cb12-106"><a href="#cb12-106" aria-hidden="true" tabindex="-1"></a><span class="fu">## Strong law of large numbers</span></span>
-<span id="cb12-107"><a href="#cb12-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-108"><a href="#cb12-108" aria-hidden="true" tabindex="-1"></a>The sample average converges almost surely to the expected value:</span>
-<span id="cb12-109"><a href="#cb12-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-110"><a href="#cb12-110" aria-hidden="true" tabindex="-1"></a>$$\overline{X}_n\ \xrightarrow{\text{a.s.}}\ \mu \qquad\textrm{when}\ n \to \infty.$$</span>
-<span id="cb12-111"><a href="#cb12-111" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb12-112"><a href="#cb12-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-113"><a href="#cb12-113" aria-hidden="true" tabindex="-1"></a>See @thm-slln.</span>
-<span id="cb12-114"><a href="#cb12-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-115"><a href="#cb12-115" aria-hidden="true" tabindex="-1"></a><span class="fu">## Code</span></span>
-<span id="cb12-116"><a href="#cb12-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-117"><a href="#cb12-117" aria-hidden="true" tabindex="-1"></a>Quarto uses either Jupyter or knitr to render code chunks. This can be triggered in the yaml header, e.g., for Jupyter (should be installed on your computer) use</span>
-<span id="cb12-118"><a href="#cb12-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-119"><a href="#cb12-119" aria-hidden="true" tabindex="-1"></a><span class="in">``` yaml</span></span>
-<span id="cb12-120"><a href="#cb12-120" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb12-121"><a href="#cb12-121" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Document"</span></span>
-<span id="cb12-122"><a href="#cb12-122" aria-hidden="true" tabindex="-1"></a>author<span class="at"> </span>"Jane<span class="at"> </span>Doe"</span>
-<span id="cb12-123"><a href="#cb12-123" aria-hidden="true" tabindex="-1"></a><span class="fu">jupyter</span><span class="kw">:</span><span class="at"> python3</span></span>
-<span id="cb12-124"><a href="#cb12-124" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb12-125"><a href="#cb12-125" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-126"><a href="#cb12-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-127"><a href="#cb12-127" aria-hidden="true" tabindex="-1"></a>For knitr (R + knitr must be installed on your computer)</span>
-<span id="cb12-128"><a href="#cb12-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-129"><a href="#cb12-129" aria-hidden="true" tabindex="-1"></a><span class="in">``` yaml</span></span>
-<span id="cb12-130"><a href="#cb12-130" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb12-131"><a href="#cb12-131" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Document"</span></span>
-<span id="cb12-132"><a href="#cb12-132" aria-hidden="true" tabindex="-1"></a>author<span class="at"> </span>"Jane<span class="at"> </span>Doe"</span>
-<span id="cb12-133"><a href="#cb12-133" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb12-134"><a href="#cb12-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-135"><a href="#cb12-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-136"><a href="#cb12-136" aria-hidden="true" tabindex="-1"></a>You can use Jupyter for Python code and more. And R + KnitR for if you want to mix R with Python (via the package reticulate @R-reticulate).</span>
-<span id="cb12-137"><a href="#cb12-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-138"><a href="#cb12-138" aria-hidden="true" tabindex="-1"></a><span class="fu">### R</span></span>
-<span id="cb12-139"><a href="#cb12-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-140"><a href="#cb12-140" aria-hidden="true" tabindex="-1"></a><span class="in">`R`</span> code <span class="co">[</span><span class="ot">@R-base</span><span class="co">]</span> chunks may be embedded as follows:</span>
-<span id="cb12-141"><a href="#cb12-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-142"><a href="#cb12-142" aria-hidden="true" tabindex="-1"></a><span class="in">```{r r-code, echo=TRUE}</span></span>
-<span id="cb12-143"><a href="#cb12-143" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
-<span id="cb12-144"><a href="#cb12-144" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-145"><a href="#cb12-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-146"><a href="#cb12-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-147"><a href="#cb12-147" aria-hidden="true" tabindex="-1"></a><span class="fu">### Python</span></span>
-<span id="cb12-148"><a href="#cb12-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-149"><a href="#cb12-149" aria-hidden="true" tabindex="-1"></a><span class="in">``` yaml</span></span>
-<span id="cb12-150"><a href="#cb12-150" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb12-151"><a href="#cb12-151" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Document"</span></span>
-<span id="cb12-152"><a href="#cb12-152" aria-hidden="true" tabindex="-1"></a>author<span class="at"> </span>"Jane<span class="at"> </span>Doe"</span>
-<span id="cb12-153"><a href="#cb12-153" aria-hidden="true" tabindex="-1"></a><span class="fu">jupyter</span><span class="kw">:</span><span class="at"> python3</span></span>
-<span id="cb12-154"><a href="#cb12-154" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb12-155"><a href="#cb12-155" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-156"><a href="#cb12-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-157"><a href="#cb12-157" aria-hidden="true" tabindex="-1"></a><span class="in">```{python, eval = FALSE}</span></span>
-<span id="cb12-158"><a href="#cb12-158" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb12-159"><a href="#cb12-159" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb12-160"><a href="#cb12-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-161"><a href="#cb12-161" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
-<span id="cb12-162"><a href="#cb12-162" aria-hidden="true" tabindex="-1"></a>ax.plot(np.arange(<span class="dv">10</span>))</span>
-<span id="cb12-163"><a href="#cb12-163" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-164"><a href="#cb12-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-165"><a href="#cb12-165" aria-hidden="true" tabindex="-1"></a><span class="fu">## Figures</span></span>
-<span id="cb12-166"><a href="#cb12-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-167"><a href="#cb12-167" aria-hidden="true" tabindex="-1"></a>Plots can be generated as follows:</span>
-<span id="cb12-168"><a href="#cb12-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-169"><a href="#cb12-169" aria-hidden="true" tabindex="-1"></a><span class="in">```{r pressure, message = FALSE}</span></span>
-<span id="cb12-170"><a href="#cb12-170" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"ggplot2"</span>)</span>
-<span id="cb12-171"><a href="#cb12-171" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(displ, hwy)) <span class="sc">+</span></span>
-<span id="cb12-172"><a href="#cb12-172" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb12-173"><a href="#cb12-173" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>()</span>
-<span id="cb12-174"><a href="#cb12-174" aria-hidden="true" tabindex="-1"></a>p</span>
-<span id="cb12-175"><a href="#cb12-175" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-176"><a href="#cb12-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-177"><a href="#cb12-177" aria-hidden="true" tabindex="-1"></a>Interactive plots may also be produced in the HTML output of the document:</span>
-<span id="cb12-178"><a href="#cb12-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-179"><a href="#cb12-179" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=FALSE}</span></span>
-<span id="cb12-180"><a href="#cb12-180" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"plotly"</span>)</span>
-<span id="cb12-181"><a href="#cb12-181" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplotly</span>(p)</span>
-<span id="cb12-182"><a href="#cb12-182" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-183"><a href="#cb12-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-184"><a href="#cb12-184" aria-hidden="true" tabindex="-1"></a>It is also possible to create figures from static images:</span>
-<span id="cb12-185"><a href="#cb12-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-186"><a href="#cb12-186" aria-hidden="true" tabindex="-1"></a>:::{#fig-logo}</span>
-<span id="cb12-187"><a href="#cb12-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-188"><a href="#cb12-188" aria-hidden="true" tabindex="-1"></a><span class="al">![](figures/sfds.png)</span></span>
-<span id="cb12-189"><a href="#cb12-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-190"><a href="#cb12-190" aria-hidden="true" tabindex="-1"></a>SFdS logo (c.a. 2021)</span>
-<span id="cb12-191"><a href="#cb12-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-192"><a href="#cb12-192" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb12-193"><a href="#cb12-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-194"><a href="#cb12-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-195"><a href="#cb12-195" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tables</span></span>
-<span id="cb12-196"><a href="#cb12-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-197"><a href="#cb12-197" aria-hidden="true" tabindex="-1"></a>Tables (with label: <span class="in">`@tbl-mylabel`</span> renders @tbl-mylabel) can be generated with markdown as follows</span>
-<span id="cb12-198"><a href="#cb12-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-199"><a href="#cb12-199" aria-hidden="true" tabindex="-1"></a>| Tables   |      Are      |  Cool |</span>
-<span id="cb12-200"><a href="#cb12-200" aria-hidden="true" tabindex="-1"></a>|----------|:-------------:|------:|</span>
-<span id="cb12-201"><a href="#cb12-201" aria-hidden="true" tabindex="-1"></a>| col 1 is |  left-aligned | $1600 |</span>
-<span id="cb12-202"><a href="#cb12-202" aria-hidden="true" tabindex="-1"></a>| col 2 is |    centered   |   $12 |</span>
-<span id="cb12-203"><a href="#cb12-203" aria-hidden="true" tabindex="-1"></a>| col 3 is | right-aligned |    $1 |</span>
-<span id="cb12-204"><a href="#cb12-204" aria-hidden="true" tabindex="-1"></a>: my table caption {#tbl-mylabel}</span>
-<span id="cb12-205"><a href="#cb12-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-206"><a href="#cb12-206" aria-hidden="true" tabindex="-1"></a>Table can also be generated by some code, for instance with knitr here:</span>
-<span id="cb12-207"><a href="#cb12-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-208"><a href="#cb12-208" aria-hidden="true" tabindex="-1"></a><span class="in">```{r cars}</span></span>
-<span id="cb12-209"><a href="#cb12-209" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">summary</span>(cars), <span class="at">caption =</span> <span class="st">"Table caption."</span>)</span>
-<span id="cb12-210"><a href="#cb12-210" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-211"><a href="#cb12-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-212"><a href="#cb12-212" aria-hidden="true" tabindex="-1"></a><span class="fu">## Algorithms</span></span>
-<span id="cb12-213"><a href="#cb12-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-214"><a href="#cb12-214" aria-hidden="true" tabindex="-1"></a>A solution to typeset pseudocode just like you would do with $\LaTeX$, yet with HTML output is to rely on the JavaScript <span class="co">[</span><span class="ot">peudocode.js</span><span class="co">](https://github.com/SaswatPadhi/pseudocode.js)</span>. Your pseudocode is written inside a <span class="in">`&lt;pre&gt;`</span> tag. You need to modify the file <span class="in">`includes/pseudocode-footer.html`</span> so that the <span class="in">`Id`</span> of the rendered element match the one in <span class="in">`&lt;pre id =""&gt;`</span>. The result is as follows:</span>
-<span id="cb12-215"><a href="#cb12-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-216"><a href="#cb12-216" aria-hidden="true" tabindex="-1"></a>::: {#algo-label}</span>
-<span id="cb12-217"><a href="#cb12-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-218"><a href="#cb12-218" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;pre</span> <span class="er">id</span><span class="ot">=</span><span class="st">"myalgo"</span><span class="kw">&gt;</span></span>
-<span id="cb12-219"><a href="#cb12-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-220"><a href="#cb12-220" aria-hidden="true" tabindex="-1"></a>\begin{algorithm}</span>
-<span id="cb12-221"><a href="#cb12-221" aria-hidden="true" tabindex="-1"></a>\caption{A simple Algorithm}</span>
-<span id="cb12-222"><a href="#cb12-222" aria-hidden="true" tabindex="-1"></a>\begin{algorithmic}</span>
-<span id="cb12-223"><a href="#cb12-223" aria-hidden="true" tabindex="-1"></a>\STATE \textbf{Data}: $\mathcal{X} = <span class="sc">\{</span>x_1, \dots, x_n<span class="sc">\}</span>$</span>
-<span id="cb12-224"><a href="#cb12-224" aria-hidden="true" tabindex="-1"></a>\STATE optimization parameters: number of iterations $T$, learning rate $\eta$</span>
-<span id="cb12-225"><a href="#cb12-225" aria-hidden="true" tabindex="-1"></a>\STATE \textbf{Result}: output $\mathcal{Y} = <span class="sc">\{</span>y_1, \dots, y_n<span class="sc">\}</span>$</span>
-<span id="cb12-226"><a href="#cb12-226" aria-hidden="true" tabindex="-1"></a>\PROCEDURE{myproc}{$T$, $\eta$}</span>
-<span id="cb12-227"><a href="#cb12-227" aria-hidden="true" tabindex="-1"></a>    \FOR{$t = 0$ \TO $T$}</span>
-<span id="cb12-228"><a href="#cb12-228" aria-hidden="true" tabindex="-1"></a>        \STATE do something (and fast please)</span>
-<span id="cb12-229"><a href="#cb12-229" aria-hidden="true" tabindex="-1"></a>    \ENDFOR</span>
-<span id="cb12-230"><a href="#cb12-230" aria-hidden="true" tabindex="-1"></a>\ENDPROCEDURE</span>
-<span id="cb12-231"><a href="#cb12-231" aria-hidden="true" tabindex="-1"></a>\end{algorithmic}</span>
-<span id="cb12-232"><a href="#cb12-232" aria-hidden="true" tabindex="-1"></a>\end{algorithm}</span>
-<span id="cb12-233"><a href="#cb12-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-234"><a href="#cb12-234" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/pre&gt;</span></span>
-<span id="cb12-235"><a href="#cb12-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-236"><a href="#cb12-236" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb12-237"><a href="#cb12-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-238"><a href="#cb12-238" aria-hidden="true" tabindex="-1"></a><span class="fu">## Handling references {#sec-references}</span></span>
-<span id="cb12-239"><a href="#cb12-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-240"><a href="#cb12-240" aria-hidden="true" tabindex="-1"></a><span class="fu">### Bibliographic references</span></span>
-<span id="cb12-241"><a href="#cb12-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-242"><a href="#cb12-242" aria-hidden="true" tabindex="-1"></a>References are displayed as footnotes using</span>
-<span id="cb12-243"><a href="#cb12-243" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">BibTeX</span><span class="co">](http://www.bibtex.org/)</span>, e.g. <span class="in">`[@computo]`</span> will be displayed</span>
-<span id="cb12-244"><a href="#cb12-244" aria-hidden="true" tabindex="-1"></a>as <span class="co">[</span><span class="ot">@computo</span><span class="co">]</span>, where <span class="in">`computo`</span> is the bibtex key for this specific</span>
-<span id="cb12-245"><a href="#cb12-245" aria-hidden="true" tabindex="-1"></a>entry. The bibliographic information is automatically retrieved from</span>
-<span id="cb12-246"><a href="#cb12-246" aria-hidden="true" tabindex="-1"></a>the <span class="in">`.bib`</span> file specified in the header of this document (here:</span>
-<span id="cb12-247"><a href="#cb12-247" aria-hidden="true" tabindex="-1"></a><span class="in">`references.bib`</span>).</span>
-<span id="cb12-248"><a href="#cb12-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-249"><a href="#cb12-249" aria-hidden="true" tabindex="-1"></a><span class="fu">### Other cross-references</span></span>
-<span id="cb12-250"><a href="#cb12-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-251"><a href="#cb12-251" aria-hidden="true" tabindex="-1"></a>As already (partially) seen, Quarto includes a mecanism similar to the</span>
-<span id="cb12-252"><a href="#cb12-252" aria-hidden="true" tabindex="-1"></a>bibliographic references for sections, equations, theorems, figures,</span>
-<span id="cb12-253"><a href="#cb12-253" aria-hidden="true" tabindex="-1"></a>lists, etc. Have a look at [this</span>
-<span id="cb12-254"><a href="#cb12-254" aria-hidden="true" tabindex="-1"></a>page](https://quarto.org/docs/authoring/cross-references.html).</span>
-<span id="cb12-255"><a href="#cb12-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-256"><a href="#cb12-256" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
-<span id="cb12-257"><a href="#cb12-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-258"><a href="#cb12-258" aria-hidden="true" tabindex="-1"></a><span class="fu">## For more information</span></span>
-<span id="cb12-259"><a href="#cb12-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-260"><a href="#cb12-260" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Check our mock version of the t-SNE paper</span><span class="co">](https://computo.sfds.asso.fr/published-paper-tsne/)</span> for a full and advanced example using the Jupyter kernel.</span>
-<span id="cb12-261"><a href="#cb12-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-262"><a href="#cb12-262" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">The template available in the Computo Quarto extension  </span><span class="co">](https://computo.sfds.asso.fr/published-paper-tsne/)</span> uses advanced features and the KnitR kernel. </span>
-<span id="cb12-263"><a href="#cb12-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-264"><a href="#cb12-264" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb12-265"><a href="#cb12-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-266"><a href="#cb12-266" aria-hidden="true" tabindex="-1"></a><span class="fu"># Session information {.appendix .unnumbered}</span></span>
-<span id="cb12-267"><a href="#cb12-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-268"><a href="#cb12-268" aria-hidden="true" tabindex="-1"></a><span class="in">```{r session-info}</span></span>
-<span id="cb12-269"><a href="#cb12-269" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span>
-<span id="cb12-270"><a href="#cb12-270" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Template for contribution to Computo"</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Example based on the quarto system"</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: "The Computo team"</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">    corresponding: true</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">    email: computo@sfds.asso.fr</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co">    url: https://computo.sfds.asso.fr</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co">    orcid: 0000-0000-0000-0000</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co">    affiliations:</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co">      - name: Société Française de Statistique</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co">        department: Statistique</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co">        address: IHP</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="co">        city: Paris</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="co">        country: France</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="co">        postal-code: 75005</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="co">        url: https://www.sfds.asso.fr/</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> last-modified</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> |</span></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="co">  This document provides a template based on the quarto system for contributions to Computo, using the jounral extension and the knitr kernel (R user).</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="an">abstract:</span><span class="co"> &gt;+</span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="co">  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere vestibulum facilisis. Aenean pretium orci augue, quis lobortis libero accumsan eu. Nam mollis lorem sit amet pellentesque ullamcorper. Curabitur lobortis libero eget malesuada vestibulum. Nam nec nibh massa. Pellentesque porttitor cursus tellus. Mauris urna erat, rhoncus sed faucibus sit amet, venenatis eu ipsum.</span></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="an">keywords:</span><span class="co"> [key1, key2, key3]</span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="an">citation:</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="co">  type: article-journal</span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="co">  container-title: "Computo"</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="co">  doi: "xxxx"</span></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a><span class="co">  url: https://computo.sfds.asso.fr/template-computo-quarto</span></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> references.bib</span></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="an">github-user:</span><span class="co"> computorg</span></span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="an">repo:</span><span class="co"> "template-computo-quarto"</span></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a><span class="an">draft:</span><span class="co"> true # set to false once the build is running</span></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a><span class="an">published:</span><span class="co"> false # will be set to true once accepted</span></span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a><span class="co">  computo-html: default</span></span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a><span class="co">  computo-pdf: default</span></span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a><span class="fu">## About this document</span></span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a>This document provides a template based on the <span class="co">[</span><span class="ot">quarto system</span><span class="co">](https://quarto.org/)</span> for contributions to **Computo** @computo. We show how <span class="in">`Python`</span> <span class="co">[</span><span class="ot">@perez2011python</span><span class="co">]</span> or  <span class="in">`R`</span> <span class="co">[</span><span class="ot">@R-base</span><span class="co">]</span> code can be included.</span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## Advice for writting your manuscript</span></span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a>First make sure that you are able to build your manuscript as a regular notebook on your system. Then you can start configure the binder environment.</span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a><span class="fu"># Formatting</span></span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a>This section covers basic formatting guidelines. <span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org/)</span> is a versatile  formatting system for authoring HTML based on markdown, integrating LaTeX and various code block interpreted either via Jupyter or Knitr (and thus deal with Python, R and many other langages). It relies on the <span class="co">[</span><span class="ot">Pandoc Markdown</span><span class="co">](https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html)</span> markup language.</span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a>To render/compile a document, run <span class="in">`quarto render`</span>. A document will be generated that includes both content as well as the output of any embedded code chunks within the document:</span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a><span class="in">``` .bash</span></span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render content.qmd <span class="co"># will render to html</span></span>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## Basic markdown formatting</span></span>
+<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a>**Bold text** or _italic_</span>
+<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>This is a list</span>
+<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>With more elements</span>
+<span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>It isn't numbered.</span>
+<span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-67"><a href="#cb11-67" aria-hidden="true" tabindex="-1"></a>But we can also do a numbered list</span>
+<span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>This is my first item</span>
+<span id="cb11-70"><a href="#cb11-70" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>This is my second item</span>
+<span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>This is my third item</span>
+<span id="cb11-72"><a href="#cb11-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-73"><a href="#cb11-73" aria-hidden="true" tabindex="-1"></a><span class="fu">## Mathematics</span></span>
+<span id="cb11-74"><a href="#cb11-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-75"><a href="#cb11-75" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mathematical formulae</span></span>
+<span id="cb11-76"><a href="#cb11-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-77"><a href="#cb11-77" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">LaTeX</span><span class="co">](https://www.latex-project.org/)</span> code is natively supported<span class="ot">[^katex]</span>, which makes it possible to use mathematical formulae:</span>
+<span id="cb11-78"><a href="#cb11-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-79"><a href="#cb11-79" aria-hidden="true" tabindex="-1"></a><span class="ot">[^katex]: </span>We use <span class="co">[</span><span class="ot">katex</span><span class="co">](https://katex.org/)</span> for this purpose.</span>
+<span id="cb11-80"><a href="#cb11-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-81"><a href="#cb11-81" aria-hidden="true" tabindex="-1"></a>will render</span>
+<span id="cb11-82"><a href="#cb11-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-83"><a href="#cb11-83" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb11-84"><a href="#cb11-84" aria-hidden="true" tabindex="-1"></a>f(x_1, \dots, x_n; \mu, \sigma^2) =</span>
+<span id="cb11-85"><a href="#cb11-85" aria-hidden="true" tabindex="-1"></a>\frac{1}{\sigma \sqrt{2\pi}} \exp{\left(- \frac{1}{2\sigma^2}\sum_{i=1}^n(x_i - \mu)^2\right)}</span>
+<span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb11-87"><a href="#cb11-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-88"><a href="#cb11-88" aria-hidden="true" tabindex="-1"></a>It is also posible to cross-reference an equation, see @eq-mylabel:</span>
+<span id="cb11-89"><a href="#cb11-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-90"><a href="#cb11-90" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb11-91"><a href="#cb11-91" aria-hidden="true" tabindex="-1"></a>\begin{aligned}</span>
+<span id="cb11-92"><a href="#cb11-92" aria-hidden="true" tabindex="-1"></a>D_{x_N} &amp; = \frac12</span>
+<span id="cb11-93"><a href="#cb11-93" aria-hidden="true" tabindex="-1"></a>\left[\begin{array}{cc}</span>
+<span id="cb11-94"><a href="#cb11-94" aria-hidden="true" tabindex="-1"></a>x_L^\top &amp; x_N^\top \end{array}\right] \,</span>
+<span id="cb11-95"><a href="#cb11-95" aria-hidden="true" tabindex="-1"></a>\left<span class="co">[</span><span class="ot">\begin{array}{cc}  L_L &amp; B \\ B^\top &amp; L_N \end{array}\right</span><span class="co">]</span> \,</span>
+<span id="cb11-96"><a href="#cb11-96" aria-hidden="true" tabindex="-1"></a>\left[\begin{array}{c}</span>
+<span id="cb11-97"><a href="#cb11-97" aria-hidden="true" tabindex="-1"></a>x_L <span class="sc">\\</span> x_N \end{array}\right] <span class="sc">\\</span></span>
+<span id="cb11-98"><a href="#cb11-98" aria-hidden="true" tabindex="-1"></a>&amp; = \frac12 (x_L^\top L_L x_L + 2 x_N^\top B^\top x_L + x_N^\top L_N x_N),</span>
+<span id="cb11-99"><a href="#cb11-99" aria-hidden="true" tabindex="-1"></a>\end{aligned}</span>
+<span id="cb11-100"><a href="#cb11-100" aria-hidden="true" tabindex="-1"></a>$$ {#eq-mylabel}</span>
+<span id="cb11-101"><a href="#cb11-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-102"><a href="#cb11-102" aria-hidden="true" tabindex="-1"></a><span class="fu">### Theorems and other amsthem-like environments</span></span>
+<span id="cb11-103"><a href="#cb11-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-104"><a href="#cb11-104" aria-hidden="true" tabindex="-1"></a>Quarto includes a nice support for theorems, with predefined prefix labels for theorems, lemmas, proposition, etc. see <span class="co">[</span><span class="ot">this page</span><span class="co">](https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs)</span>. Here is a simple example:</span>
+<span id="cb11-105"><a href="#cb11-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-106"><a href="#cb11-106" aria-hidden="true" tabindex="-1"></a>::: {#thm-slln}</span>
+<span id="cb11-107"><a href="#cb11-107" aria-hidden="true" tabindex="-1"></a><span class="fu">## Strong law of large numbers</span></span>
+<span id="cb11-108"><a href="#cb11-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-109"><a href="#cb11-109" aria-hidden="true" tabindex="-1"></a>The sample average converges almost surely to the expected value:</span>
+<span id="cb11-110"><a href="#cb11-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-111"><a href="#cb11-111" aria-hidden="true" tabindex="-1"></a>$$\overline{X}_n\ \xrightarrow{\text{a.s.}}\ \mu \qquad\textrm{when}\ n \to \infty.$$</span>
+<span id="cb11-112"><a href="#cb11-112" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb11-113"><a href="#cb11-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-114"><a href="#cb11-114" aria-hidden="true" tabindex="-1"></a>See @thm-slln.</span>
+<span id="cb11-115"><a href="#cb11-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-116"><a href="#cb11-116" aria-hidden="true" tabindex="-1"></a><span class="fu">## Code</span></span>
+<span id="cb11-117"><a href="#cb11-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-118"><a href="#cb11-118" aria-hidden="true" tabindex="-1"></a>Quarto uses either Jupyter or knitr to render code chunks. This can be triggered in the yaml header, e.g., for Jupyter (should be installed on your computer) use</span>
+<span id="cb11-119"><a href="#cb11-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-120"><a href="#cb11-120" aria-hidden="true" tabindex="-1"></a><span class="in">``` yaml</span></span>
+<span id="cb11-121"><a href="#cb11-121" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb11-122"><a href="#cb11-122" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Document"</span></span>
+<span id="cb11-123"><a href="#cb11-123" aria-hidden="true" tabindex="-1"></a>author<span class="at"> </span>"Jane<span class="at"> </span>Doe"</span>
+<span id="cb11-124"><a href="#cb11-124" aria-hidden="true" tabindex="-1"></a><span class="fu">jupyter</span><span class="kw">:</span><span class="at"> python3</span></span>
+<span id="cb11-125"><a href="#cb11-125" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb11-126"><a href="#cb11-126" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-127"><a href="#cb11-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-128"><a href="#cb11-128" aria-hidden="true" tabindex="-1"></a>For knitr (R + knitr must be installed on your computer)</span>
+<span id="cb11-129"><a href="#cb11-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-130"><a href="#cb11-130" aria-hidden="true" tabindex="-1"></a><span class="in">``` yaml</span></span>
+<span id="cb11-131"><a href="#cb11-131" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb11-132"><a href="#cb11-132" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Document"</span></span>
+<span id="cb11-133"><a href="#cb11-133" aria-hidden="true" tabindex="-1"></a>author<span class="at"> </span>"Jane<span class="at"> </span>Doe"</span>
+<span id="cb11-134"><a href="#cb11-134" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb11-135"><a href="#cb11-135" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-136"><a href="#cb11-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-137"><a href="#cb11-137" aria-hidden="true" tabindex="-1"></a>You can use Jupyter for Python code and more. And R + KnitR for if you want to mix R with Python (via the package reticulate @R-reticulate).</span>
+<span id="cb11-138"><a href="#cb11-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-139"><a href="#cb11-139" aria-hidden="true" tabindex="-1"></a><span class="fu">### R</span></span>
+<span id="cb11-140"><a href="#cb11-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-141"><a href="#cb11-141" aria-hidden="true" tabindex="-1"></a><span class="in">`R`</span> code <span class="co">[</span><span class="ot">@R-base</span><span class="co">]</span> chunks may be embedded as follows:</span>
+<span id="cb11-142"><a href="#cb11-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-143"><a href="#cb11-143" aria-hidden="true" tabindex="-1"></a><span class="in">```{r r-code, echo=TRUE}</span></span>
+<span id="cb11-144"><a href="#cb11-144" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
+<span id="cb11-145"><a href="#cb11-145" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-146"><a href="#cb11-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-147"><a href="#cb11-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-148"><a href="#cb11-148" aria-hidden="true" tabindex="-1"></a><span class="fu">### Python</span></span>
+<span id="cb11-149"><a href="#cb11-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-150"><a href="#cb11-150" aria-hidden="true" tabindex="-1"></a><span class="in">``` yaml</span></span>
+<span id="cb11-151"><a href="#cb11-151" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb11-152"><a href="#cb11-152" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Document"</span></span>
+<span id="cb11-153"><a href="#cb11-153" aria-hidden="true" tabindex="-1"></a>author<span class="at"> </span>"Jane<span class="at"> </span>Doe"</span>
+<span id="cb11-154"><a href="#cb11-154" aria-hidden="true" tabindex="-1"></a><span class="fu">jupyter</span><span class="kw">:</span><span class="at"> python3</span></span>
+<span id="cb11-155"><a href="#cb11-155" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb11-156"><a href="#cb11-156" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-157"><a href="#cb11-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-158"><a href="#cb11-158" aria-hidden="true" tabindex="-1"></a><span class="in">```{python, eval = FALSE}</span></span>
+<span id="cb11-159"><a href="#cb11-159" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb11-160"><a href="#cb11-160" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb11-161"><a href="#cb11-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-162"><a href="#cb11-162" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb11-163"><a href="#cb11-163" aria-hidden="true" tabindex="-1"></a>ax.plot(np.arange(<span class="dv">10</span>))</span>
+<span id="cb11-164"><a href="#cb11-164" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-165"><a href="#cb11-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-166"><a href="#cb11-166" aria-hidden="true" tabindex="-1"></a><span class="fu">## Figures</span></span>
+<span id="cb11-167"><a href="#cb11-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-168"><a href="#cb11-168" aria-hidden="true" tabindex="-1"></a>Plots can be generated as follows:</span>
+<span id="cb11-169"><a href="#cb11-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-170"><a href="#cb11-170" aria-hidden="true" tabindex="-1"></a><span class="in">```{r pressure, message = FALSE}</span></span>
+<span id="cb11-171"><a href="#cb11-171" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"ggplot2"</span>)</span>
+<span id="cb11-172"><a href="#cb11-172" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(displ, hwy)) <span class="sc">+</span></span>
+<span id="cb11-173"><a href="#cb11-173" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb11-174"><a href="#cb11-174" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>()</span>
+<span id="cb11-175"><a href="#cb11-175" aria-hidden="true" tabindex="-1"></a>p</span>
+<span id="cb11-176"><a href="#cb11-176" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-177"><a href="#cb11-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-178"><a href="#cb11-178" aria-hidden="true" tabindex="-1"></a>It is also possible to create figures from static images:</span>
+<span id="cb11-179"><a href="#cb11-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-180"><a href="#cb11-180" aria-hidden="true" tabindex="-1"></a>:::{#fig-logo}</span>
+<span id="cb11-181"><a href="#cb11-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-182"><a href="#cb11-182" aria-hidden="true" tabindex="-1"></a><span class="al">![](figures/sfds.png)</span></span>
+<span id="cb11-183"><a href="#cb11-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-184"><a href="#cb11-184" aria-hidden="true" tabindex="-1"></a>SFdS logo (c.a. 2021)</span>
+<span id="cb11-185"><a href="#cb11-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-186"><a href="#cb11-186" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb11-187"><a href="#cb11-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-188"><a href="#cb11-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-189"><a href="#cb11-189" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tables</span></span>
+<span id="cb11-190"><a href="#cb11-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-191"><a href="#cb11-191" aria-hidden="true" tabindex="-1"></a>Tables (with label: <span class="in">`@tbl-mylabel`</span> renders @tbl-mylabel) can be generated with markdown as follows</span>
+<span id="cb11-192"><a href="#cb11-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-193"><a href="#cb11-193" aria-hidden="true" tabindex="-1"></a>| Tables   |      Are      |  Cool |</span>
+<span id="cb11-194"><a href="#cb11-194" aria-hidden="true" tabindex="-1"></a>|----------|:-------------:|------:|</span>
+<span id="cb11-195"><a href="#cb11-195" aria-hidden="true" tabindex="-1"></a>| col 1 is |  left-aligned | $1600 |</span>
+<span id="cb11-196"><a href="#cb11-196" aria-hidden="true" tabindex="-1"></a>| col 2 is |    centered   |   $12 |</span>
+<span id="cb11-197"><a href="#cb11-197" aria-hidden="true" tabindex="-1"></a>| col 3 is | right-aligned |    $1 |</span>
+<span id="cb11-198"><a href="#cb11-198" aria-hidden="true" tabindex="-1"></a>: my table caption {#tbl-mylabel}</span>
+<span id="cb11-199"><a href="#cb11-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-200"><a href="#cb11-200" aria-hidden="true" tabindex="-1"></a>Table can also be generated by some code, for instance with knitr here:</span>
+<span id="cb11-201"><a href="#cb11-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-202"><a href="#cb11-202" aria-hidden="true" tabindex="-1"></a><span class="in">```{r cars}</span></span>
+<span id="cb11-203"><a href="#cb11-203" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">summary</span>(cars), <span class="at">caption =</span> <span class="st">"Table caption."</span>)</span>
+<span id="cb11-204"><a href="#cb11-204" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-205"><a href="#cb11-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-206"><a href="#cb11-206" aria-hidden="true" tabindex="-1"></a><span class="fu">## Handling references {#sec-references}</span></span>
+<span id="cb11-207"><a href="#cb11-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-208"><a href="#cb11-208" aria-hidden="true" tabindex="-1"></a><span class="fu">### Bibliographic references</span></span>
+<span id="cb11-209"><a href="#cb11-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-210"><a href="#cb11-210" aria-hidden="true" tabindex="-1"></a>References are displayed as footnotes using</span>
+<span id="cb11-211"><a href="#cb11-211" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">BibTeX</span><span class="co">](http://www.bibtex.org/)</span>, e.g. <span class="in">`[@computo]`</span> will be displayed</span>
+<span id="cb11-212"><a href="#cb11-212" aria-hidden="true" tabindex="-1"></a>as <span class="co">[</span><span class="ot">@computo</span><span class="co">]</span>, where <span class="in">`computo`</span> is the bibtex key for this specific</span>
+<span id="cb11-213"><a href="#cb11-213" aria-hidden="true" tabindex="-1"></a>entry. The bibliographic information is automatically retrieved from</span>
+<span id="cb11-214"><a href="#cb11-214" aria-hidden="true" tabindex="-1"></a>the <span class="in">`.bib`</span> file specified in the header of this document (here:</span>
+<span id="cb11-215"><a href="#cb11-215" aria-hidden="true" tabindex="-1"></a><span class="in">`references.bib`</span>).</span>
+<span id="cb11-216"><a href="#cb11-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-217"><a href="#cb11-217" aria-hidden="true" tabindex="-1"></a><span class="fu">### Other cross-references</span></span>
+<span id="cb11-218"><a href="#cb11-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-219"><a href="#cb11-219" aria-hidden="true" tabindex="-1"></a>As already (partially) seen, Quarto includes a mecanism similar to the</span>
+<span id="cb11-220"><a href="#cb11-220" aria-hidden="true" tabindex="-1"></a>bibliographic references for sections, equations, theorems, figures,</span>
+<span id="cb11-221"><a href="#cb11-221" aria-hidden="true" tabindex="-1"></a>lists, etc. Have a look at [this</span>
+<span id="cb11-222"><a href="#cb11-222" aria-hidden="true" tabindex="-1"></a>page](https://quarto.org/docs/authoring/cross-references.html).</span>
+<span id="cb11-223"><a href="#cb11-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-224"><a href="#cb11-224" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
+<span id="cb11-225"><a href="#cb11-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-226"><a href="#cb11-226" aria-hidden="true" tabindex="-1"></a><span class="fu">## For more information</span></span>
+<span id="cb11-227"><a href="#cb11-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-228"><a href="#cb11-228" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Check our mock version of the t-SNE paper</span><span class="co">](https://computo.sfds.asso.fr/published-paper-tsne/)</span> for a full and advanced example using the Jupyter kernel.</span>
+<span id="cb11-229"><a href="#cb11-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-230"><a href="#cb11-230" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">The template available in the Computo Quarto extension  </span><span class="co">](https://computo.sfds.asso.fr/published-paper-tsne/)</span> uses advanced features and the KnitR kernel (interactive plots and pseudocode). </span>
+<span id="cb11-231"><a href="#cb11-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-232"><a href="#cb11-232" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb11-233"><a href="#cb11-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-234"><a href="#cb11-234" aria-hidden="true" tabindex="-1"></a><span class="fu"># Session information {.appendix .unnumbered}</span></span>
+<span id="cb11-235"><a href="#cb11-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-236"><a href="#cb11-236" aria-hidden="true" tabindex="-1"></a><span class="in">```{r session-info}</span></span>
+<span id="cb11-237"><a href="#cb11-237" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span>
+<span id="cb11-238"><a href="#cb11-238" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
