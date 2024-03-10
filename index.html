@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jane Doe">
 <meta name="author" content="John Doe">
-<meta name="dcterms.date" content="2024-03-03">
+<meta name="dcterms.date" content="2024-03-10">
 <meta name="keywords" content="key1, key2, key3">
 <meta name="description" content="This document provides a template based on the quarto system for contributions to Computo, using the jounral extension and the knitr kernel (R user).">
 
@@ -209,14 +209,14 @@ ISSN 2824-7795</p>
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 3, 2024</p>
+        <p class="date">March 10, 2024</p>
       </div>
     </div>
                                     
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">March 3, 2024</p>
+        <p class="date-modified">March 10, 2024</p>
       </div>
     </div>
       
@@ -602,7 +602,7 @@ loaded via a namespace (and not attached):
 [25] xfun_0.42         cli_3.6.2         withr_3.0.0       magrittr_2.0.3   
 [29] mgcv_1.9-1        digest_0.6.34     grid_4.3.3        lifecycle_1.0.4  
 [33] nlme_3.1-164      vctrs_0.6.5       evaluate_0.23     glue_1.7.0       
-[37] farver_2.1.1      fansi_1.0.6       colorspace_2.1-0  rmarkdown_2.25   
+[37] farver_2.1.1      fansi_1.0.6       colorspace_2.1-0  rmarkdown_2.26   
 [41] tools_4.3.3       pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
 </div>
 </div>
@@ -618,7 +618,7 @@ loaded via a namespace (and not attached):
   publisher = {Société Française de Statistique},
   title = {Template for Contribution to {Computo}},
   journal = {Computo},
-  date = {2024-03-03},
+  date = {2024-03-10},
   url = {https://computo.sfds.asso.fr/template-computo-quarto},
   doi = {xxxx},
   issn = {2824-7795},
@@ -777,6 +777,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -818,7 +823,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
