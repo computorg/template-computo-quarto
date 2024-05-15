@@ -1,14 +1,8 @@
 name: computorbuild
 channels:
   - conda-forge
-  - r
+  - defaults
 dependencies:
-  - jupyter
   - matplotlib
   - numpy
-  - r-base
-  - r-knitr
-  - r-plotly
-  - r-tidyverse
-  - r-reticulate
-  - r-rmarkdown
+

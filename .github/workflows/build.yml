@@ -7,45 +7,46 @@ on:
       - master
       - main
 
-env: # Change this if needed
-  quarto_file: template-computo-quarto
-  GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-
 jobs:
   computorticle:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checking out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Installing dependencies with Micromamba
-        uses: mamba-org/provision-with-micromamba@v14
+      - name: Cache micromamba
+        uses: mamba-org/setup-micromamba@v1
         with:
-          cache-env: true
+          environment-file: environment.yml
+          cache-environment: true
 
       - name: Installing quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           tinytex: true
 
-      - name: Install Computo extension for Quarto
+      - name: Install Computo extension for Quarto + libertinus hack
         run: |
             quarto add --no-prompt computorg/computo-quarto-extension
+            ~/.TinyTeX/bin/x86_64-linux/tlmgr install libertinus-fonts
 
-      - name: Rendering with Quarto
-        shell: bash -l {0}
-        run: |
-            quarto render ${{ env.quarto_file }}.qmd
-            mkdir _build
-            mv ${{ env.quarto_file }}.html _build/index.html
-            mv -vf ${{ env.quarto_file }}_files figures ${{ env.quarto_file }}.pdf _build/
-            cp environment.yml _build/
-            touch _build/.nojekyll
+      - name: install system dependencies
+        run: sudo apt update && sudo apt install -y libharfbuzz-dev libfribidi-dev libcurl4-openssl-dev
 
-      - name: Deploying article on github pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: register micromamba for reticulate
+        shell: micromamba-shell {0}
+        run: echo RETICULATE_PYTHON=`which python` > _environment
+
+      - name: Install R
+        uses: r-lib/actions/setup-r@v2
+
+      - name: Install R Dependencies with renv
+        uses: r-lib/actions/setup-renv@v2
+
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
         with:
-          BRANCH: gh-pages
-          FOLDER: _build
-          CLEAN: true
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -3,6 +3,10 @@ _build
 template-computo-quarto.html
 template-computo-quarto.pdf
 template-computo-quarto_files/
+template-computo-quarto_cache/
+_freeze/
+.micromamba/
 /.quarto/
 _extensions/
 .Rproj.user
+.Rprofile

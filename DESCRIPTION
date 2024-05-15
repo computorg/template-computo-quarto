@@ -1,0 +1,1 @@
+Depends: reticulate, plotly, knitr, tidyverse, rmarkdown, codetools
