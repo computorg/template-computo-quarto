@@ -23,8 +23,10 @@ jobs:
 
       - name: Installing quarto
         uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          tinytex: true
+
+      - name: Installing tinytex
+        run: |
+          quarto install tinytex --update-path
 
       - name: Install Computo extension for Quarto + libertinus hack
         run: |
