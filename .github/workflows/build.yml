@@ -30,7 +30,8 @@ jobs:
       - name: Install Computo extension for Quarto + libertinus hack
         run: |
             quarto add --no-prompt computorg/computo-quarto-extension
-            ~/.TinyTeX/bin/x86_64-linux/tlmgr install libertinus-fonts
+
+# ~/.TinyTeX/bin/x86_64-linux/tlmgr install libertinus-fonts
 
       - name: install system dependencies
         run: sudo apt update && sudo apt install -y libharfbuzz-dev libfribidi-dev libcurl4-openssl-dev
