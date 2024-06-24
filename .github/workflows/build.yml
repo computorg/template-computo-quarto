@@ -23,10 +23,9 @@ jobs:
 
       - name: Installing quarto
         uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Installing tinytex
-        run: |
-          quarto install tinytex --update-path
+        with:
+          version: pre-release
+          tinytex: true
 
       - name: Install Computo extension for Quarto + libertinus hack
         run: |
